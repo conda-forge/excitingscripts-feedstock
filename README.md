@@ -3,11 +3,13 @@ About excitingscripts-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/excitingscripts-feedstock/blob/main/LICENSE.txt)
 
-Home: https://github.com/exciting/exciting
+Home: https://pypi.org/project/excitingscripts/
 
 Package license: Apache-2.0
 
 Summary: Executable command-line scripts for working with the exciting code.
+
+Development: https://github.com/exciting/exciting
 
 Current build status
 ====================
@@ -16,7 +18,9 @@ Current build status
 <table><tr>
     <td>All platforms:</td>
     <td>
-      <img src="https://img.shields.io/badge/noarch-disabled-lightgrey.svg" alt="noarch disabled">
+      <a href="https://github.com/conda-forge/excitingscripts-feedstock/actions/workflows/conda-build.yml">
+        <img src="https://github.com/conda-forge/excitingscripts-feedstock/actions/workflows/conda-build.yml/badge.svg?event=push&branch=main">
+      </a>
     </td>
   </tr>
 </table>

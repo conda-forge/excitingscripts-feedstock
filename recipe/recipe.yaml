@@ -1,0 +1,55 @@
+schema_version: 1
+
+context:
+  version: "1.1.1"
+
+package:
+  name: excitingscripts
+  version: ${{ version }}
+
+source:
+  url: https://pypi.org/packages/source/e/excitingscripts/excitingscripts-${{ version }}.tar.gz
+  sha256: 21e66bfbe05e230e37f456e0cc89bd37084f1dba267a20fd547b28fa2c12b589
+
+build:
+  number: 0
+  noarch: python
+  script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+
+requirements:
+  host:
+    - python ${{ python_min }}.*
+    - setuptools >=40.8.0
+    - wheel >=0.35.0
+    - excitingtools
+    - numpy
+    - pip
+  run:
+    - python >=${{ python_min }}
+    - numpy >=1.14.5
+    - matplotlib-base >=2.2.0
+    - scipy >=1.7.0
+    - excitingtools >=1.6.3
+    - typing_extensions >=3.7
+    - ase >=3.22.1
+    - requests
+
+tests:
+  - python:
+      imports:
+        - excitingscripts
+      pip_check: true
+      python_version:
+        - ${{ python_min }}.*
+        - "*"
+
+about:
+  summary: Executable command-line scripts for working with the exciting code.
+  license: Apache-2.0
+  license_file: LICENSE
+  homepage: https://pypi.org/project/excitingscripts/
+  repository: https://github.com/exciting/exciting
+
+extra:
+  recipe-maintainers:
+    - jan-janssen
